@@ -1,3 +1,4 @@
+import {Router} from "@angular/router";
 import {Component, Input} from "@angular/core";
 @Component(
   {
@@ -6,5 +7,13 @@ import {Component, Input} from "@angular/core";
     styleUrls: ['./game-tile.component.css']
   })
 export class GameTileComponent {
+  constructor(private router:Router) {
+
+  }
+
   @Input() game;
+  loadGame(val){
+    this.router.navigateByUrl('game/' + this.game.id)
+    console.log(val);
+  }
 }

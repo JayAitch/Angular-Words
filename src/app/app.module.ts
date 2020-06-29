@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 import {GameListComponent} from "./game-list.component";
 import {GameTileComponent} from "./game-tile.component";
 import {AppComponent} from './app.component';
-
+import {LiveGameComponent} from "./live-game.component";
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
-    GameTileComponent
+    GameTileComponent,
+    LiveGameComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

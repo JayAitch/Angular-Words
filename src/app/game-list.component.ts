@@ -1,6 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {GameListService} from "./game-list.service";
 
+
+//this.router.navigateByUrl('/user');
 @Component(
   {
     selector:'game-list',

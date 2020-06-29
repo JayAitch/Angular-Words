@@ -5,10 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class GameListService {
   games =[
-    {name:"name", players:5, isStarted:false},
-    {name:"name2", players:8, isStarted:false}
+    {id:0, name:"name", players:5, isStarted:false},
+    {id:1, name:"name2", players:8, isStarted:false}
   ]
-
+  getGame(val){
+    let game = this.games[val];
+    if(game)
+      return game;
+    return null;
+  }
   get() {
     return this.games;
   }
